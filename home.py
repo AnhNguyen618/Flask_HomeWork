@@ -35,6 +35,6 @@ def home():
     </body>
 </html>'''
 
-app_obj.run()
+#app_obj.run()
 
 
