@@ -22,7 +22,4 @@ def home():
     if form.validate_on_submit():
         flash(f'{form.cityname.data}')
 
-    return render_template('home.html', names = name, city_name = city_names, field = form)
-
-
-
+    return render_template('home.html',name = name, city_names = city_names, form = form)
