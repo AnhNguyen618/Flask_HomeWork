@@ -19,7 +19,7 @@ city_names = ["Paris","London","Rome","Tahiti"]
 def home():
     return f'''<html>
     <head>
-        <title>Homework 3</title>
+        <title>Homework 3 - Flask </title>
     </head>
     <body>
         <h1>Welcome {name}!</h1>
