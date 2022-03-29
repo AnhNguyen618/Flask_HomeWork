@@ -16,7 +16,7 @@ class SubmitForm(FlaskForm):
 name = 'Lisa'
 city_names = ["Paris","London","Rome","Tahiti"]
 
-@mmyobj.route('/', methods = ['GET','POST'])
+@myobj.route('/', methods = ['GET','POST'])
 def home():
     field = SubmitForm()
     if field.validate_on_submit():
