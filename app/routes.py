@@ -13,8 +13,9 @@ class SubmitForm(FlaskForm):
     cityname = StringField('City Name', validators=[DataRequired()])
     submitButton = SubmitField('Submit')
 
-name = 'Lisa'
 city_names = ["Paris","London","Rome","Tahiti"]
+name = 'Lisa'
+
 
 @myobj.route('/', methods = ['GET','POST'])
 def home():
@@ -22,7 +23,4 @@ def home():
     if form.validate_on_submit():
         flash(f'{form.cityname.data}')
 
-    return render_template('home.html', name = name, city_names = city_names,form = form)
-
-
-
+    return render_template('home.html', names = name, city_name = city_names, field = form)
