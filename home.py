@@ -35,6 +35,4 @@ def home():
     </body>
 </html>'''
 
-#app_obj.run()
-
 
