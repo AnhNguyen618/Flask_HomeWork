@@ -4,10 +4,10 @@ from flask import render_template
 from flask import request
 from flask import session
 from flask import flash
+from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms import SubmitField
 from wtforms.validators import DataRequired
-from flask_wtf import FlaskForm
 
 class SubmitForm(FlaskForm):
     cityname = StringField('City Name', validators=[DataRequired()])
@@ -22,4 +22,4 @@ def home():
     if form.validate_on_submit():
         flash(f'{form.cityname.data}')
 
-    return render_template('home.html', city_names = city_names, name = name ,form = form)
+    return render_template('home.html', name = name, city_names = city_names,form = form)
