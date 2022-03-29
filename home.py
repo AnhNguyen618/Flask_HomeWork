@@ -7,19 +7,19 @@ from flask import flash
 import os
 
 
-app_obj = Flask(__name__)
+myapp_obj = Flask(__name__)
 
-app_obj.config['DEBUG'] =True
+myapp_obj.config['DEBUG'] =True
 
 name = 'Lisa'
 
 city_names = ["Paris","London","Rome","Tahiti"]
 
-@app_obj.route('/')
+@myapp_obj.route('/')
 def home():
     return f'''<html>
     <head>
-        <title>Homework 3 - Flask </title>
+        <title>Homework 3</title>
     </head>
     <body>
         <h1>Welcome {name}!</h1>
@@ -34,5 +34,3 @@ def home():
         </p>
     </body>
 </html>'''
-
-
