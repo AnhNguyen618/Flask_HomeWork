@@ -22,15 +22,15 @@
             {% endfor %}  
             </ul>
     </p>
-    <form action=""method="POST">
-        {{ form.hidden_tag() }}
+    <field action=""method="POST">
+        {{ field.hidden_tag() }}
         <p>
-            {{ form.cityname.label }}<br>
-            {{ form.cityname(size = 32) }}
+            {{ field.city_name.label }}<br>
+            {{ field.city_name(size = 32) }}
         </p>
         <p>
-            {{ form.submitButton() }}
+            {{ field.submit_button() }}
         </p>
-    </form>
+    </field>
     </body>
 </html>
