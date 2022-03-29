@@ -1,3 +1,3 @@
-from app import myhw_obj
+from app import myobj
 
-myhw_obj.run()
+myobj.run()
