@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 3 - Flask</title>
+    </head>
+    <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for text in messages %}
+            <li> {{text}} </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+    <h1>Welcome {{name}}!</h1>
+    <p>
+        <a href ="www.google.com">not google</a>
+        <ul>
+            {% for names in city_names %}
+              <li>{{ names }}</li>
+            {% endfor %}  
+            </ul>
+    </p>
+    <form action=""method="POST">
+        {{ field.hidden_tag() }}
+        <p>
+            {{ field.city_name.label }}<br>
+            {{ field.city_name(size = 32) }}
+        </p>
+        <p>
+            {{ field.submit_button() }}
+        </p>
+    </form>
+    </body>
+</html>
